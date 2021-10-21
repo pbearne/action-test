@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Assign issues with new-topic label to GitHub Project
         uses: srggrs/assign-one-project-github-action@1.2.0
-        if: contains(github.event.issue.labels.*.name, 'Technical Writing Request')
+        if: contains(github.event.issue.title, 'Technical Writing Request')
         with:
           project: 'https://github.com/pbearne/action-test/projects/1'
           column_name: 'dev'
