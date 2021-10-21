@@ -2,7 +2,7 @@ name: Auto Assign Issues to Projects
 
 on:
   issues:
-    types: [labeled]
+    types: [opened]
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
