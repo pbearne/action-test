@@ -16,4 +16,9 @@ jobs:
         if: contains(github.event.issue.title, 'Technical Writing Request')
         with:
           project: 'https://github.com/pbearne/action-test/projects/1'
-          column_name: 'dev'
+          column_name: 'Backlog / Wishlist'
+      - name: Label issues
+        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        with:
+          add-labels: "Technical Writing Request"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
